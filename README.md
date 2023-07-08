@@ -6,7 +6,7 @@
 [![License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-# Python-3-template
+# Python3_template
 Basic Python3 template
 
 ### Built With
