@@ -31,7 +31,7 @@ if __name__ == '__main__':
         "Autor": "Alejandro Gómez",
         "calling": "{0} parameters".format(sys.argv[0])
     }
-    cf.showScriptInfo(info)
+    cf.show_script_info(info)
 
     # info menssage
     cf.info_msg("info menssage")
