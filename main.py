@@ -17,30 +17,21 @@
 #       along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
-import os
-import datetime
-import logging.config
 import src.commons.common_functions as cf
 
-# GLOBALS
-FILE_LOOGER = os.path.normpath('config/logging.conf')
-FILE_LOG = os.path.normpath("log/" + cf.getFiletName(sys.argv[0]) + ".log")
-logging.config.fileConfig(FILE_LOOGER)
-LOGGER = logging.getLogger('testLogger')
-today = datetime.date.today()
 
 if __name__ == '__main__':
     # Add Banner
-    cf.printMegaBanner(cf.getFiletName(sys.argv[0], True))
+    cf.print_mega_banner(cf.get_file_name(sys.argv[0], True))
     # Show script info
     info = {
-        "name": cf.getFiletName(os.path.realpath(__file__), True),
-        "location": os.path.dirname(os.path.realpath(__file__)),
+        "name": str(cf.get_file_name(sys.argv[0], True)),
+        "location": sys.argv[0],
         "description": "Basic Python3 template",
         "Autor": "Alejandro Gómez",
-        "calling": sys.argv[0] + " parameters"
+        "calling": "{0} parameters".format(sys.argv[0])
     }
     cf.showScriptInfo(info)
 
-    cf.infoMsg(LOGGER, "info menssage")
-    cf.errorMsg(LOGGER, 0, "ERROR example")
+    # info menssage
+    cf.info_msg("info menssage")
