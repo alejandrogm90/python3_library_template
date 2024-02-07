@@ -73,6 +73,11 @@ Project Link: https://github.com/alejandrogm90/coin-comparator
 <!--
 pip freeze > requirements.txt
 pipreqs --force
+
+pipenv update
+pipenv requirements > requirements.txt
+pipenv run python script.py
+pipenv run python -m unittest
 -->
 
 [version-shield]: https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge
