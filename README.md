@@ -28,7 +28,7 @@ You need install first:
 
 ### Installation
 
-- Go to main project at https://github.com/alejandrogm90/coin-comparator
+- Go to main project at [project-url]
 - Clone the repo:
 ```shell
 git clone https://github.com/alejandrogm90/coin-comparator.git
@@ -46,7 +46,7 @@ On terminal:
 ./setup.py
 ```
 
-_For more examples, please refer to the [Documentation]([wiki-url])_
+_For more examples, please refer to the [Documentation][wiki-url]_
 
 ## Contributing
 
@@ -66,9 +66,9 @@ Distributed under the License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Alejandro Gómez - [@alejandrogm90](https://github.com/alejandrogm90)
+Alejandro Gómez - [@alejandrogm90][profile-url]
 
-Project Link: https://github.com/alejandrogm90/coin-comparator
+Project Link: [project-url]
 
 <!--
 pip freeze > requirements.txt
@@ -76,6 +76,8 @@ pipreqs --force
 
 pipenv update
 pipenv requirements > requirements.txt
+pipenv run python setup.py bdist_wheel
+
 pipenv run python script.py
 pipenv run python -m unittest
 -->
@@ -89,6 +91,7 @@ pipenv run python -m unittest
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [python-shield]: https://img.shields.io/badge/python-000000?style=for-the-badge&logo=python&logoColor=white
 
+[profile-url]: https://github.com/alejandrogm90
 [project-url]: https://github.com/alejandrogm90/coin-comparator/
 [wiki-url]: https://github.com/alejandrogm90/coin-comparator/wiki
 [contributors-url]: https://github.com/alejandrogm90/coin-comparator/graphs/contributors

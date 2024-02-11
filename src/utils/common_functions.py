@@ -37,9 +37,9 @@ def get_head_line(level: str) -> str:
 
 
 def info_msg(msg: str, output_file="") -> None:
-    """ Show a menssage text
+    """ Show a message text
 
-    :param msg: info menssage
+    :param msg: info message
     :param output_file: output file
     """
     LOGGER.info(": {0}".format(msg))
@@ -48,9 +48,9 @@ def info_msg(msg: str, output_file="") -> None:
 
 
 def warn_msg(msg: str, output_file="") -> None:
-    """ Show a menssage text
+    """ Show a message text
 
-    :param msg: warning menssage
+    :param msg: warning message
     :param output_file: output file
     """
     LOGGER.warning(": {0}".format(msg))
@@ -59,10 +59,10 @@ def warn_msg(msg: str, output_file="") -> None:
 
 
 def error_msg(number: int, msg: str, output_file="") -> None:
-    """ Show a menssage text and exits with output number
+    """ Show a message text and exits with output number
 
     :param number: output number
-    :param msg: error menssage
+    :param msg: error message
     :param output_file: output file
     """
     LOGGER.error("[" + str(number) + "]: " + msg)
@@ -155,17 +155,17 @@ def is_valid_date(cadena: str) -> bool:
     """
     if len(cadena) != 10:
         return False
-
+    
     if cadena[4] != "-" or cadena[7] != "-":
         return False
-
+    
     try:
         anno = int(cadena[0:4])
         mes = int(cadena[5:7])
         dia = int(cadena[8:10])
-    except:
+    except ValueError:
         return False
-
+    
     if mes > 12 or mes < 1:
         return False
     elif anno < mes or anno < dia:
@@ -184,7 +184,7 @@ def print_banner(characters: str, text_list: list) -> None:
     for line in text_list:
         if line_size < len(line):
             line_size = len(line)
-
+    
     print(characters * (line_size + 4))
     for line in text_list:
         if len(line) == line_size:
@@ -248,7 +248,7 @@ def print_log_in_file(output_file: str, msg: str) -> None:
         log_file = open(output_file, 'a')
         log_file.write(msg + os.linesep)
         log_file.close()
-    except:
+    except OSError:
         print("Error writing in file: {0}".format(output_file))
 
 
