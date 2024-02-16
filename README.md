@@ -79,7 +79,9 @@ pipenv requirements > requirements.txt
 pipenv run python setup.py bdist_wheel
 
 pipenv run python script.py
+pipenv run python -m unittest discover
 pipenv run python -m unittest
+pipenv run python -m unittest test/utils/test_common_functions.py
 -->
 
 [version-shield]: https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge
